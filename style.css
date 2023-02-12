@@ -57,6 +57,7 @@ body {
 .secIn.alt {
   margin-top: 1em;
   padding: 10px 8px;
+  height: fit-content
 }
 
 @keyframes myAnim {
