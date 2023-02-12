@@ -6,7 +6,7 @@ submit.addEventListener("submit", function() {
 })*/
 
 $.ajax({
-  url: "/images/",
+  url: "/adhamwaleed.github.io/images/",
   success: function(data) {
     $(data).find("a:contains(.jpg)").each(function() {
       // will loop through 
