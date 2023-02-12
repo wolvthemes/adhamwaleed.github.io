@@ -1,22 +1,23 @@
-/*var submit = document.querySelector('#subM');
-var textA = submit.querySelector("#mess");
-submit.addEventListener("submit", function() {
-  alert('Thanks for Submitting Your Message, We will reply as fast as possible');
-  window.open("https://api.whatsapp.com/send/?phone=201062928325&text=" + (textA.value.replace(/\n/g, "%0A") || []));
-})*/
+const xhr = new XMLHttpRequest();
+const url = "https://api.github.com/repos/wolvthemes/adhamwaleed.github.io/contents/images/"
 
-$.ajax({
-  url: "/adhamwaleed.github.io/images/",
-  success: function(data) {
-    $(data).find("a:contains(.jpg)").each(function() {
-      // will loop through 
-      var images = $(this).attr("href");
+xhr.open('GET', url, true);
 
-      var spcL = $('<div class="socL">');
-      var socIm = $('<img></img>');
-      socIm.attr("src", images);
-      socIm.appendTo(spcL);
-      spcL.appendTo('.socI');
-    })
+xhr.onload = function() {
+  const data = JSON.parse(this.response);
+  for (var i = 0; i < data.length; i++) {
+
+    var dat = data[i].path;
+    var images = JSON.stringify(dat);
+
+    var spcL = $('<div class="socL">');
+    var socIm = $('<img></img>');
+    socIm.attr("src", "./" + images);
+    console.log(images)
+    socIm.appendTo(spcL);
+    spcL.appendTo('.socI');
+    console.log();
   }
-})
+};
+
+xhr.send();
