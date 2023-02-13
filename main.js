@@ -9,20 +9,15 @@ xhr.onload = function() {
 
     var dat = data[i].path;
     var images = dat;
-    console.log(images)
     if (images.includes(".mp4")) {
-      var wid = $('.socL').height();
-      var hit = $('.socL').width();
+      var wid = spcL.innerHeight();
+      var hit = spcL.innerWidth();
       var spcL = $('<div class="socL"></div>');
       var socIm = $('<video controls></video>');
       var socVd = $('<source></source>');
       socIm.attr("src", "./" + images);
-      socIm.attr("height", hit);
-      socIm.attr("width", wid);
-      socVd.attr("height", hit);
-      socVd.attr("width", wid);
-      socVd.appendTo(socIm)
-      console.log(hit + " - " + wid)
+      socIm.attr("height", "100%");
+      socIm.attr("width", "100%");
     } else {
       var spcL = $('<div class="socL">');
       var socIm = $('<img></img>');
