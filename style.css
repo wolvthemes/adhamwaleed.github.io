@@ -342,3 +342,8 @@ button.alt,
 .flB, .secIn.alt, .secIn.alt >*, .flB >*, .secIn.alt .secB, .secIn.alt .secB >* {
   pointer-events: auto;
 }
+
+
+.secB .icon, .secB .icon svg {
+  pointer-events: auto
+}
