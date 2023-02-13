@@ -344,6 +344,6 @@ button.alt,
 }
 
 
-.secB .icon, .socL.alt .secB .icon svg {
+.secB .icon, .secB, .socL.alt .secB .icon svg {
   pointer-events: auto !important
 }
