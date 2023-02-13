@@ -41,6 +41,7 @@ body {
   padding: 15px;
   overflow: hidden;
   overflow-y: auto;
+  pointer-events: auto !important;
   background: var(--contB);
   position: relative;
   border-radius: 20px;
