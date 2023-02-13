@@ -8,19 +8,20 @@ xhr.onload = function() {
   for (var i = 0; i < data.length; i++) {
 
     var dat = data[i].path;
-    if (dat === "index.html"){
-      dat = "";
-    }
-    var images = dat
-    
-
-    var spcL = $('<div class="socL">');
-    var socIm = $('<img></img>');
-    socIm.attr("src", "./" + images);
+    var images = dat;
     console.log(images)
+    if (images.includes(".mp4")) {
+      var spcL = $('<div class="socL"><video controls></video></div>');
+      var socIm = $('<source></source>');
+      socIm.attr("src", "./" + images);
+    } else {
+      var spcL = $('<div class="socL">');
+      var socIm = $('<img></img>');
+      socIm.attr("src", "./" + images);
+    }
+
     socIm.appendTo(spcL);
     spcL.appendTo('.socI');
-    console.log();
   }
 };
 
