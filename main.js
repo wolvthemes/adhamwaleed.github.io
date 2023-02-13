@@ -17,9 +17,12 @@ xhr.onload = function() {
       var socIm = $('<video controls></video>');
       var socVd = $('<source></source>');
       socIm.attr("src", "./" + images);
-      socIm.innerHeight = hit;
-      socIm.innerWidth = wid;
+      socIm.attr("height", hit);
+      socIm.attr("width", wid);
+      socVd.attr("height", hit);
+      socVd.attr("width", wid);
       socVd.appendTo(socIm)
+      console.log(hit + " - " + wid)
     } else {
       var spcL = $('<div class="socL">');
       var socIm = $('<img></img>');
