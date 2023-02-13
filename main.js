@@ -8,7 +8,11 @@ xhr.onload = function() {
   for (var i = 0; i < data.length; i++) {
 
     var dat = data[i].path;
-    var images = JSON.stringify(dat);
+    if (dat === "index.html"){
+      dat = "";
+    }
+    var images = dat
+    
 
     var spcL = $('<div class="socL">');
     var socIm = $('<img></img>');
