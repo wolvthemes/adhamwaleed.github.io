@@ -340,10 +340,10 @@ button.alt,
 }
 
 .flB, .secIn.alt, .secIn.alt >*, .flB >*, .secIn.alt .secB, .secIn.alt .secB >* {
-  pointer-events: auto;
+  pointer-events: auto!important;
 }
 
 
 .secB .icon, .secB .icon svg {
-  pointer-events: auto
+  pointer-events: auto !important
 }
