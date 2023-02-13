@@ -9,7 +9,6 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  pointer-events: none !important
 }
 
 html {
@@ -339,11 +338,6 @@ button.alt,
   background: rgba(0 0 0 / 12%)
 }
 
-.flB, .secIn.alt, .secIn.alt >*, .flB >*, .secIn.alt .secB, .secIn.alt .secB >* {
-  pointer-events: auto!important;
-}
-
-
-.secB .icon, .secB, .socL.alt .secB .icon svg {
-  pointer-events: auto !important
+.socL:not(.vid) {
+  pointer-events: none!important;
 }
