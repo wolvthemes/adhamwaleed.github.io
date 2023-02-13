@@ -12,7 +12,7 @@ xhr.onload = function() {
     if (images.includes(".mp4")) {
       var wid = spcL.innerHeight();
       var hit = spcL.innerWidth();
-      var spcL = $('<div class="socL"></div>');
+      var spcL = $('<div class="socL vid"></div>');
       var socIm = $('<video controls></video>');
       var socVd = $('<source></source>');
       socIm.attr("src", "./" + images);
